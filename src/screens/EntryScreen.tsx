@@ -22,7 +22,7 @@ export function EntryScreen() {
         <Mascot state="normal" size="lg" />
         
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold text-foreground">Let's Be</h1>
+          <h1 className="text-3xl font-bold text-foreground">Let's Be Real</h1>
           <p className="text-muted-foreground text-lg">
             Let's see if your New Year's resolution is... realistic.
           </p>
