@@ -1,0 +1,144 @@
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/600.css";
+@import "@fontsource/nunito/700.css";
+@import "@fontsource/nunito/800.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 98%;
+    --foreground: 220 20% 20%;
+
+    /* Cards - pure white with warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    /* Primary - Soft sky blue (from mascot) */
+    --primary: 195 80% 70%;
+    --primary-foreground: 220 25% 15%;
+
+    /* Secondary - Soft pink (from mascot cheeks) */
+    --secondary: 340 60% 85%;
+    --secondary-foreground: 340 40% 30%;
+
+    /* Muted - Soft gray with warmth */
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Accent - Lighter blue */
+    --accent: 195 70% 92%;
+    --accent-foreground: 195 60% 30%;
+
+    /* Destructive - Soft coral (not harsh) */
+    --destructive: 10 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 195 80% 70%;
+
+    --radius: 1rem;
+
+    /* Verdict colors */
+    --verdict-achievable: 145 60% 50%;
+    --verdict-achievable-bg: 145 60% 95%;
+    --verdict-optimistic: 40 90% 55%;
+    --verdict-optimistic-bg: 40 90% 95%;
+    --verdict-delusional: 10 70% 60%;
+    --verdict-delusional-bg: 10 70% 95%;
+
+    /* Habit grid */
+    --habit-empty: 40 20% 92%;
+    --habit-filled: 195 80% 65%;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220 20% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -6px hsl(220 20% 20% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 25% 14%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 25% 14%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 195 70% 60%;
+    --primary-foreground: 220 25% 10%;
+
+    --secondary: 340 40% 35%;
+    --secondary-foreground: 340 30% 90%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 195 50% 25%;
+    --accent-foreground: 195 70% 90%;
+
+    --destructive: 10 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 195 70% 60%;
+
+    --verdict-achievable: 145 50% 45%;
+    --verdict-achievable-bg: 145 40% 15%;
+    --verdict-optimistic: 40 70% 45%;
+    --verdict-optimistic-bg: 40 50% 15%;
+    --verdict-delusional: 10 60% 45%;
+    --verdict-delusional-bg: 10 40% 15%;
+
+    --habit-empty: 220 20% 18%;
+    --habit-filled: 195 60% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+}
